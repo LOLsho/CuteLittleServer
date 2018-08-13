@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: white;
+            font-family: 'Comfortaa', cursive;
+            cursor: default;
+        }
+        .wrap {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #7DAE46;
+        }
+        .container {
+            width: 475px;
+            background-color: #585856;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            padding: 20px;
+            text-align: center;
+            border-radius: 15px;
+        }
+        .bgColor {
+            background-color: rgba(0, 0, 0, .2);
+        }
+        h1 {
+            padding: 10px;
+            border-radius: 15px;
+            transition: box-shadow 1s ease, transform 1s ease;
+        }
+        h1:hover {
+            transform: translateY(-5px) scale(1.009);
+            box-shadow: 0 3px 8px rgba(0,0,0,0.5);
+        }
+        h1:hover .very-important {
+            color: #7DAE46;
+        }
+        h3 {
+            transition: transform 1s ease;
+            margin-top: 20px;
+        }
+        h3:hover {
+            transform: translateY(-5px);
+        }
+        h3:hover .very-important {
+            color: #7DAE46;
+        }
+        .very-important {
+            transition: color 1s ease;
+        }
+        .very-important-dark {
+            transition: color 0.5s ease;
+        }
+        .gratitude {
+            margin-top: 30px;
+            padding: 0 20px;
+            transition: transform 1s ease;
+        }
+        .gratitude:hover {
+            transform: translateY(-5px);
+        }
+        .gratitude:hover .very-important {
+            color: #7DAE46;
+        }
+        .gift {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .side {
+            border-radius: 15px;
+            /*background-color: rgba(255, 255, 255, .1);*/
+            width: 48%;
+            padding: 10px;
+            transition: box-shadow 1s ease, transform 1s ease;
+        }
+        .side:hover .very-important {
+            color: #7DAE46;
+        }
+        .left:hover {
+            transform: translateX(-5px) rotate(7deg);
+            /*box-shadow: 1px -1px 10px rgba(0,0,0,0.5);*/
+        }
+        .right:hover {
+            transform: translateX(5px) rotate(-7deg);
+            /*box-shadow: -1px -1px 10px rgba(0,0,0,0.5);*/
+        }
+        .gift__title {
+
+        }
+        .gift__content {
+            font-size: 25px;
+            margin-top: 10px;
+        }
+        .author {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            border: 1px solid white;
+            border-radius: 15px;
+            padding: 10px;
+            font-size: 13px;
+            transition: background-color 0.5s ease, transform 0.5s ease, top 0.5s ease, right 0.5s ease;
+        }
+        .author:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+            transform: scale(1.2) rotate(10deg);
+            top: 32px;
+            right: 30px;
+        }
+        .author:hover .very-important-dark {
+            color: #585856;
+        }
+        .author__bottom {
+            margin-top: 5px;
+        }
+        .nail {
+            height: 5px;
+            width: 5px;
+            border-radius: 100px;
+            margin: 0 auto 5px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="container">
+            <h1 class="bgColor">Спасибо, что отправили <span class="very-important">GET-запрос</span> на наш сервер!</h1>
+            <h3>Этим действием Вы запустили что-то <span class="very-important">очень важное...</span></h3>
+            <div class="gratitude">
+                В благодарность мы отправляем Вам текущие <span class="very-important">дату</span> и <span class="very-important">время:</span>
+            </div>
+
+            <div class="gift">
+                <div class="side left bgColor">
+                    <div class="very-important">
+                        <div class="nail">
+                        </div>
+                        <div class="gift__title">
+                            Дата
+                        </div>
+                        <div class="gift__content">
+                            <span class="very-important">{{date}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="side right bgColor">
+                    <div class="very-important">
+                        <div class="nail">
+                        </div>
+                        <div class="gift__title">
+                            Время
+                        </div>
+                        <div class="gift__content">
+                            <span class="very-important">{{time}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="author">
+        <div class="author__top">Made by <span class="very-important-dark">Matvey Rukol,</span></div>
+        <div class="author__bottom"><span class="very-important-dark">LoftSchool</span> student</div>
+    </div>
+</body>
+</html>
